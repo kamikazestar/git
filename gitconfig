@@ -2,6 +2,28 @@
   name = kamikazestar
   email = 8329080+kamikazestar@users.noreply.github.com
 
+[core]
+	editor = nvim
+	pager = delta
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+    navigate = true
+    side-by-side = true
+    line-numbers = true
+    features = catppuccin-mocha
+
+[merge]
+    conflictStyle = diff3
+
+[diff]
+    colorMoved = default
+
+[include]
+    path = ./themes/delta/catppuccin.gitconfig
+
 [alias]
   a = "!git status --short | peco | awk '{print $2}' | xargs git add"
   d = diff
